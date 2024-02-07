@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&display=swap');
+$wod-blue: #00d5ff;
+$wod-purple: #7400d5;
+$wod-white: #fff;
+$wod-black: #000;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  position: relative;
+  z-index: 10;
+  & * {
+    z-index: 10;
+  }
+}
+
+.shape-divider {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 !important;
+  z-index: 0;
+  
+  &.top { top: -1px; }
+  &.bottom { bottom: -1px; }
+}
+
+.wod-hero {
+  background-image: url('https://gym-network.s3.amazonaws.com/assets/products/unity-fest/unity-fest-hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  .wod-hero-column {
+    padding-top: 30%;
+    padding-bottom: 15%;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .wod-hero-title {
+    color: $wod-white;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  
+  .wod-hero-subtitle {
+    font-size: 50px;
+    line-height: 54px;
+    color: $wod-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  
+  @media(max-width: 991px) {
+    img { max-width: 400px; }
+    .wod-hero-title { font-size: 60px; }
+    .wod-hero-subtitle { font-size: 38px; line-height: 42px; }
+  }
+  
+  @media(max-width: 641px) {
+    .wod-hero-column { padding-left: 15px; padding-right: 15px; padding-bottom: 20%; }
+    img { max-width: 225px; }
+    .wod-hero-title { font-size: 44px; }
+    .wod-hero-subtitle { font-size: 28px; line-height: 32px; }
+  }
+}
+
+.wod-button {
+  background-color: $wod-blue;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 900;
+  color: $wod-white;
+  text-transform: uppercase;
+  padding: 20px 55px;
+  transition: background-color .3s ease;
+  
+  &:hover {
+    background-color: $wod-purple;
+    color: $wod-white;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 641px) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 20px 35px;
+  }
+}
+
+.wod-intro-join {
+  position: relative;
+  padding: 0 0 125px;
+  background-color: $wod-black;
+  
+  .wod-join-title {
+    font-size: 34px;
+    line-height: 42px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $wod-blue;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .wod-join-desc {
+    color: $wod-white;
+    font-size: 21px;
+    line-height: 32px;
+    
+    @media (max-width: 641px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  
+  .wod-join-cta {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    color: $wod-blue;
+    font-size: 28px;
+    line-height: 36px;
+    font-style: italic;
+    text-transform: uppercase;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .wod-join-reg-price {
+    display: block;
+    color: $wod-white;
+    font-size: 28px;
+    line-height: 36px;
+    
+    @media (max-width: 641px) {
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+  
+  .wod-join-sale-price {
+    display: block;
+    color: $wod-white;
+    font-size: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+}
+
+.wod-6-weeks {
+  padding: 75px 0;
+  
+  .wod-6-week-title {
+    font-size: 48px;
+    line-height: 54px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $wod-purple;
+    margin-bottom: 25px;
+    
+    @media (max-width: 641px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+  
+  img {
+    margin-bottom: 18px;
+  }
+  
+  .col-6-weeks-icons-desc {
+    font-size: 21px;
+    
+    @media (max-width: 641px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+}
+
+.wod-dancers-overview {
+  padding: 150px 0;
+  background-color: $wod-black;
+  
+  .wod-dancers-title {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 600;
+    color: $wod-white;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+    
+    span {
+      color: $wod-blue;
+      text-transform: uppercase;
+    }
+  }
+  
+  .wod-dancers-desc {
+    color: $wod-white;
+    font-size: 21px;
+    line-height: 32px;
+    
+    @media (max-width: 641px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  
+  .dancers-carousel-title {
+    font-size: 22px;
+    color: $wod-white;
+    margin-top: 50px;
+    margin-bottom: 16px;
+  }
+  
+  .dancers-carousel-wrapper,
+  .dancers-carousel-dual-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 55px;
+    .fas,
+    .fa {
+      color: $wod-white;
+      font-size: 32px;
+      cursor: pointer;
+      
+      &.slick-next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      &.slick-prev {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    
+    .slick-dots {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -56px;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      
+      li {
+        display: inline-block;
+        margin: 0 12px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $wod-white;
+        border-radius: 50%;
+        cursor: pointer;
+        &.slick-active { background-color: $wod-white; }
+        
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  img {
+    padding: 10px;
+  }
+}
+
+.wod-whats-included {
+  padding: 75px 0;
+  
+  .wod-whats-included-title {
+    font-size: 34px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .wod-whats-included-subtitle {
+    font-size: 34px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $wod-blue;
+    text-transform: uppercase;
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .wod-whats-included-dates {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 55px;
+  }
+  
+  .whats-included-icons-desc {
+    font-size: 21px;
+    margin-bottom: 35px;
+    
+    @media (max-width: 641px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  
+  img {
+    margin-bottom: 18px;
+  }
+  
+  .whats-included-cta {
+    font-size: 32px;
+    font-weight: 700;
+    color: $wod-black;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+}
+
+.wod-video {
+  .wistia_embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    padding-bottom: 56.25%;
+  }
+}
+
+.how-it-works {
+  padding: 75px 0;
+  
+  .how-it-works-title {
+    font-size: 42px;
+    color: $wod-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .how-it-works-desc {
+    font-size: 26px;
+    font-weight: 700;
+    
+    @media (max-width: 641px) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+  
+  .how-it-works-step {
+    font-size: 21px;
+    
+    @media (max-width: 641px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  
+  .register-column {
+    margin-top: 50px;
+  }
+  
+  .how-it-works-register {
+    font-size: 26px;
+    margin-bottom: 35px;
+    
+    @media (max-width: 641px) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+}
+
+.wod-partners {
+  padding: 125px 0;
+  background-color: $wod-black;
+  
+  .wod-partners-title {
+    font-size: 42px;
+    color: $wod-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: 641px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  
+  .wod-logos-column {
+    img {
+      margin: 0 4px;
+    }
+  }
+}
